@@ -1,0 +1,58 @@
+.Button{
+	background: #550DED;
+	border: 1px solid #550DED;
+	border-radius: 2px;
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.02em;
+
+	color: #FFFFFF;
+}
+
+.TicketBalanceIndicator{
+	background: #550DED;
+	box-shadow: 0px 6.85714px 17.1429px -4.57143px rgba(0, 0, 0, 0.2);
+	width: 44px;
+   	height: 44px;
+   	border-radius: 22px;
+   	position: absolute;
+ 	float: right;  	
+ 	right: 22px;	
+ 	top:  0px;
+ 	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 29px;
+	align-items: center;
+	text-align: center;
+
+	color: #FFFFFF;
+
+
+}
+
+.mask {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-attachment: fixed;
+}
+.bg-image {
+	position: relative;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
