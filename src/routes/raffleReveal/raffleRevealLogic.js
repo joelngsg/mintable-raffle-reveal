@@ -7,35 +7,43 @@ import placeholder_ticket from '../../assets/placeholder_ticket.png';
 const RaffleRevealLogic = () => {
 	const [silverRaffleBalance, setSilverRaffleBalance] = useState(1);
 	const [goldRaffleBalance, setGoldRaffleBalance] = useState(3);
-	const [diamondRaffleBalance, setDiamondRaffleBalance] = useState(0);
+	const [diamondRaffleBalance, setDiamondRaffleBalance] = useState(2);
 	const [placeholder_ticket_src, setPlaceholder_ticket_src] = useState(placeholder_ticket)
 
 	const drawTicket = (ticketType) => {
 		switch(ticketType)
 		{
 			case 'silver':
-				setPlaceholder_ticket_src(processing)
-				// process
-				setTimeout(function() { //Start the timer
-				  	setPlaceholder_ticket_src(noreward)
-				}.bind(this), 1000)
-				setSilverRaffleBalance(silverRaffleBalance - 1)
+				if(silverRaffleBalance > 0)
+				{
+					setPlaceholder_ticket_src(processing)
+					// process
+					setTimeout(function() { //Start the timer
+					  	setPlaceholder_ticket_src(noreward)
+					}.bind(this), 1000)
+					setSilverRaffleBalance(silverRaffleBalance - 1)
+				}
 				break;
 			case 'gold':
-				setPlaceholder_ticket_src(processing)
-				// process
-				setTimeout(function() { //Start the timer
-				  	setPlaceholder_ticket_src(btcnft)
-				}.bind(this), 1000)
-				setGoldRaffleBalance(goldRaffleBalance - 1)
+				if (goldRaffleBalance > 0 ) {
+					setPlaceholder_ticket_src(processing)
+					// process
+					setTimeout(function() { //Start the timer
+					  	setPlaceholder_ticket_src(btcnft)
+					}.bind(this), 1000)
+					setGoldRaffleBalance(goldRaffleBalance - 1)
+					
+				}
 				break;
 			case 'diamond':
-				setPlaceholder_ticket_src(processing)
-				// process
-				setTimeout(function() { //Start the timer
-				  	setPlaceholder_ticket_src(btcnft)
-				}.bind(this), 1000)
-				setDiamondRaffleBalance(diamondRaffleBalance - 1)
+				if(diamondRaffleBalance > 0){
+					setPlaceholder_ticket_src(processing)
+					// process
+					setTimeout(function() { //Start the timer
+					  	setPlaceholder_ticket_src(btcnft)
+					}.bind(this), 1000)
+					setDiamondRaffleBalance(diamondRaffleBalance - 1)
+				}
 				break;
 			default:
 				console.log(ticketType)
